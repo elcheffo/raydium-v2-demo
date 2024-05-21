@@ -23,7 +23,9 @@ export const createCpmmPool = async (inputs: {
 }) => {
   const { raydium } = inputs;
 
+  console.log("[info] About to fetch mintA info");
   const mintA = await raydium.token.getTokenInfo(inputs.mintA.mint);
+  console.log("[info] About to fetch mintB info");
   const mintB = await raydium.token.getTokenInfo(inputs.mintB.mint);
 
   console.log("[info] program id", {
